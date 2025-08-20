@@ -1,7 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import AdminDashboard from "./pages/admin/AdminDashboard";
-import LoginPage from "./pages/Login/LoginPage";
 import EmployeeFileOfficialTraining from "./pages/employee/EmployeeFileRequest";
 import DashboardLayout from "./layout/DashboardLayout";
 import EmployeePayslip from "./pages/employee/EmployeePayslip";
@@ -11,7 +9,7 @@ import ScreenEmployeePayslip from "./pages/employee/ScreenEmployeePayslip";
 import ScreenEmployee13Month from "./pages/employee/ScreenEmployee13Month";
 import ScreenEmployeeFileRequest from "./pages/employee/ScreenEmployeeFileRequest";
 import AdminDashboardLayout from "./layout/AdminDashboardLayout";
-
+import LoginPage from "./pages/Login/LoginPage";
 function App() {
   return (
     <div className="inter-regular text-sm">
