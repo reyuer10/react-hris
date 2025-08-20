@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import EmployeeFileOfficialTraining from "./pages/employee/EmployeeFileRequest";
 import DashboardLayout from "./layout/DashboardLayout";
 import EmployeePayslip from "./pages/employee/EmployeePayslip";
-import EmployeeDashboard from "./pages/Employee/EmployeeDashboard";
+import EmployeeDashboard from "./pages/employee/EmployeeDashboard";
 import Employee13Month from "./pages/employee/Employee13Month";
 import ScreenEmployeePayslip from "./pages/employee/ScreenEmployeePayslip";
 import ScreenEmployee13Month from "./pages/employee/ScreenEmployee13Month";
