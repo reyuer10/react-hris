@@ -9,7 +9,8 @@ import ScreenEmployeePayslip from "./pages/employee/ScreenEmployeePayslip";
 import ScreenEmployee13Month from "./pages/employee/ScreenEmployee13Month";
 import ScreenEmployeeFileRequest from "./pages/employee/ScreenEmployeeFileRequest";
 import AdminDashboardLayout from "./layout/AdminDashboardLayout";
-import LoginPage from "./pages/Login/LoginPage";
+import LoginPage from "./pages/login-user/LoginPage";
+// import LoginPage from "./pages/login/LoginPage";
 function App() {
   return (
     <div className="inter-regular text-sm">
