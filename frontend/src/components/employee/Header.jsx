@@ -4,10 +4,10 @@ function Header() {
   const headerData = [
     {
       id: 1,
-      name: "Reyuer D. Flores",
-      position: "Web Developer",
-      gmail: "reyuer10@gmail.com",
-      address: "zone 2, San jose, City of San Fernando, Pampanga",
+      name: "Juan Dela Cruz",
+      position: "Position",
+      gmail: "juandelacruz@gmail.com",
+      address: "Clark, Pampanga",
       sss: "12-3456789-0",
       phic: "12-1234567890-1",
       hdmf: "1234-1234-1234",

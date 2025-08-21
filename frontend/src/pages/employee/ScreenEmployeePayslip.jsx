@@ -23,9 +23,9 @@ function ScreenEmployeePayslip() {
   // );
   return (
     <div className="p-4 space-y-4">
-      <div className="flex items-center justify-between">
+      <div className="flex items-start justify-between">
         <div>
-          <span className="text-xl font-medium">Payslip</span>
+          <span className="text-xl font-bold">Payslip</span>
         </div>
         <div>
           <Dropdown placement="bottom-start">

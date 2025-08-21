@@ -69,8 +69,8 @@ export const fileOfficialTrainingSvg = (
 
 export const payslipSvg = (
   <svg
-    height={26}
-    width={26}
+    height={24}
+    width={24}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -178,8 +178,8 @@ export const dashboardSvg = (
 
 export const thirteenMonthSvg = (
   <svg
-    height={26}
-    width={26}
+    height={24}
+    width={24}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -222,8 +222,8 @@ export const thirteenMonthSvg = (
 
 export const logoutSvg = (
   <svg
-    height={26}
-    width={26}
+    height={24}
+    width={24}
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

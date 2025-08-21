@@ -6,7 +6,7 @@ function ScreenEmployeeFileRequest() {
   return (
     <div className="p-4 text-[#323232] space-y-4">
       <div>
-        <p className="font-medium text-xl">File Request</p>
+        <p className="font-bold text-xl">File Request</p>
       </div>
       <div className="space-y-4">
         <label htmlFor="date">Select Date:</label>

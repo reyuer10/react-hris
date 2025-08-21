@@ -4,7 +4,7 @@ function LoginPage() {
     const navigate = useNavigate()
   return (
     <div className="h-screen w-full flex justify-center items-center p-4">
-      <div className="flex flex-col w-[25%] max-md:w-full space-y-4">
+      <div className="flex flex-col w-[400px] max-md:w-full space-y-4">
         <div className="py-4 text-center leading-3">
           <p className=" text-lg font-medium">Human Resources</p>
           <span className=" italic text-gray-500">Information System</span>
@@ -16,7 +16,7 @@ function LoginPage() {
             placeholder="Username"
           />
         </div>
-        <div>
+        <div> 
           <input
             className="max-md:text-[16px] max-md:py-4 bg-gray-100 transition-all focus-within:ring-2 ring-gray-400 outline-none border-none p-3 rounded-xl w-full"
             type="text"

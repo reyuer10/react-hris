@@ -10,14 +10,20 @@ import ScreenEmployee13Month from "./pages/employee/ScreenEmployee13Month";
 import ScreenEmployeeFileRequest from "./pages/employee/ScreenEmployeeFileRequest";
 import AdminDashboardLayout from "./layout/AdminDashboardLayout";
 import LoginPage from "./pages/login-user/LoginPage";
-// import LoginPage from "./pages/login/LoginPage";
+import UserTable from "./pages/admin/UserTable";
+import RegisterEmployee from "./pages/admin/RegisterEmployee";
+
 function App() {
   return (
     <div className="inter-regular text-sm">
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="admin/dashboard" element={<AdminDashboardLayout />} >
-        
+        <Route path="admin/dashboard" element={<AdminDashboardLayout />}>
+          <Route index element={<UserTable />} />
+          <Route
+            path="register/employee"
+            element={<RegisterEmployee />}
+          />
         </Route>
         <Route path="dashboard" element={<DashboardLayout />}>
           <Route index element={<EmployeeDashboard />} />

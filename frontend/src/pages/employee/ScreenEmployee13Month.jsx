@@ -15,7 +15,7 @@ function ScreenEmployee13Month() {
     <div className="p-4 space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <span className="text-xl font-medium">13 Month</span>
+          <span className="text-xl font-bold">13 Month</span>
         </div>
         <div></div>
       </div>
