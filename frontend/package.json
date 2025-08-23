@@ -16,6 +16,7 @@
     "@heroui/react": "^2.8.2",
     "@heroui/theme": "^2.4.20",
     "@internationalized/date": "^3.8.2",
+    "@react-pdf/renderer": "^4.3.0",
     "@tailwindcss/vite": "^4.1.12",
     "axios": "^1.11.0",
     "framer-motion": "^12.23.12",
