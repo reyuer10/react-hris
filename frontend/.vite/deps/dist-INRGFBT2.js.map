@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../node_modules/.pnpm/@heroui+dom-animation@2.1.10_framer-motion@12.23.12_react-dom@19.1.1_react@19.1.1__react@19.1.1_/node_modules/@heroui/dom-animation/dist/index.mjs"],
+  "sourcesContent": ["\"use client\";\n\n// src/index.ts\nimport { domAnimation } from \"framer-motion\";\nvar index_default = domAnimation;\nexport {\n  index_default as default\n};\n"],
+  "mappings": ";;;;;;;;AAIA,IAAI,gBAAgB;",
+  "names": []
+}

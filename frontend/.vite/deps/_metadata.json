@@ -2,7 +2,72 @@
   "hash": "70d0084e",
   "configHash": "a946e260",
   "lockfileHash": "0c762cd4",
-  "browserHash": "79356eae",
-  "optimized": {},
-  "chunks": {}
+  "browserHash": "d067959c",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/.pnpm/react@19.1.1/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "9d1e75d0",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/.pnpm/react-dom@19.1.1_react@19.1.1/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "9e234756",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/.pnpm/react-router-dom@7.8.1_react-dom@19.1.1_react@19.1.1__react@19.1.1/node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "46a85461",
+      "needsInterop": false
+    },
+    "@heroui/react": {
+      "src": "../../node_modules/.pnpm/@heroui+react@2.8.2_@types+react@19.1.10_framer-motion@12.23.12_react-dom@19.1.1_react@_45817003f588bdb9a4c3eeabb88750f9/node_modules/@heroui/react/dist/index.mjs",
+      "file": "@heroui_react.js",
+      "fileHash": "fb561265",
+      "needsInterop": false
+    },
+    "@internationalized/date": {
+      "src": "../../node_modules/.pnpm/@internationalized+date@3.8.2/node_modules/@internationalized/date/dist/import.mjs",
+      "file": "@internationalized_date.js",
+      "fileHash": "ca3f012a",
+      "needsInterop": false
+    },
+    "@heroui/dropdown": {
+      "src": "../../node_modules/.pnpm/@heroui+dropdown@2.3.24_@heroui+system@2.4.20_@heroui+theme@2.4.20_tailwindcss@4.1.12___31e9900f8c36a8b0257ff480590e7331/node_modules/@heroui/dropdown/dist/index.mjs",
+      "file": "@heroui_dropdown.js",
+      "fileHash": "1a9858b4",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "src-UW24ZMRV-QPKR7LCW": {
+      "file": "src-UW24ZMRV-QPKR7LCW.js"
+    },
+    "chunk-PJTPFD3L": {
+      "file": "chunk-PJTPFD3L.js"
+    },
+    "chunk-35OGIGHX": {
+      "file": "chunk-35OGIGHX.js"
+    },
+    "chunk-LDMDWSXG": {
+      "file": "chunk-LDMDWSXG.js"
+    },
+    "es-H3FMQWSE": {
+      "file": "es-H3FMQWSE.js"
+    },
+    "dist-INRGFBT2": {
+      "file": "dist-INRGFBT2.js"
+    },
+    "chunk-SUOIM36W": {
+      "file": "chunk-SUOIM36W.js"
+    },
+    "chunk-FADBDFBI": {
+      "file": "chunk-FADBDFBI.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
 }
