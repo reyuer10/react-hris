@@ -153,32 +153,159 @@ function PayslipPages() {
       flexDirection: "row",
       justifyContent: "space-between",
       paddingVertical: 2,
+      fontSize: 8,
+    },
+
+    fontBold: {
+      fontWeight: 700,
     },
   });
 
   const styleRightContent = StyleSheet.create({
     Wrapped: {
       height: "45%",
-      borderWidth: 0.5
+      width: "100%",
     },
 
     Header: {
       height: "35%",
-      borderWidth: 0.5,
       padding: 13,
+      width: "100%",
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
     },
 
     Body: {
       height: "35%",
-      borderWidth: 0.5,
+      width: "100%",
       padding: 13,
+      display: "flex",
+      flexDirection: "row",
     },
 
     Footer: {
       height: "35%",
-      borderWidth: 0.5,
+      width: "100%",
       padding: 13,
     },
+  });
+
+  const rightContentHeader = StyleSheet.create({
+    left: {
+      height: "100%",
+      width: "35%",
+    },
+
+    middle: {
+      height: "100%",
+      width: "30%",
+    },
+
+    right: {
+      height: "100%",
+      width: "35%",
+    },
+
+    rightContentHeight: {
+      height: "25%",
+    },
+
+    basicPayPerMonthTitle: {
+      fontStyle: "italic",
+      color: "#52525c",
+    },
+
+    spaceBetween: {
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "space-between",
+    },
+
+    fontBold: {
+      fontWeight: 700,
+    },
+  });
+
+  const rightContentMiddle = StyleSheet.create({
+    left: {
+      height: "100%",
+      width: "35%",
+    },
+
+    right: {
+      height: "100%",
+      width: "65%",
+    },
+
+    firstLayer: {
+      height: "30%",
+    },
+
+    secondLayer: {
+      height: "70%",
+      paddingVertical: 12,
+    },
+
+    fontBold: {
+      fontWeight: 700,
+    },
+
+    spaceBetween: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+    },
+
+    child: {
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-between",
+      alignItems: "center",
+      paddingVertical: 2,
+    },
+
+    grossPayTitle: {
+      padding: 4,
+      backgroundColor: "#f3f4f6",
+      fontWeight: 700,
+    },
+
+    grossPayAmount: {
+      padding: 4,
+      width: "100%",
+      textAlign: "right",
+      backgroundColor: "#f3f4f6",
+      fontWeight: 700,
+    },
+
+    contributionsTitle: {
+      paddingVertical: 8,
+    },
+  });
+
+  const rightContentFooter = StyleSheet.create({
+    spaceBetween: {
+      paddingVertical: 2,
+      justifyContent: "space-between",
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      fontWeight: 700,
+    },
+
+    spaceBetweenWithHighlight: {
+      padding: 4,
+      justifyContent: "space-between",
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "center",
+      fontWeight: 700,
+      backgroundColor: "#f3f4f6",
+    },
+
   });
 
   return (
@@ -262,43 +389,164 @@ function PayslipPages() {
               </View>
               <View style={stylesDateToFigures.contentSpaceBetween}>
                 <Text>Gross Income</Text>
-                <Text>123456</Text>
+                <Text style={stylesDateToFigures.fontBold}>123456</Text>
               </View>
               <View style={stylesDateToFigures.contentSpaceBetween}>
                 <Text>Taxable Income</Text>
-                <Text>123456</Text>
+                <Text style={stylesDateToFigures.fontBold}>123456</Text>
               </View>
               <View style={stylesDateToFigures.contentSpaceBetween}>
                 <Text>Withholding Tax</Text>
-                <Text>123456</Text>
+                <Text style={stylesDateToFigures.fontBold}>123456</Text>
               </View>
               <View style={stylesDateToFigures.contentSpaceBetween}>
                 <Text>SSS EE</Text>
-                <Text>123456</Text>
+                <Text style={stylesDateToFigures.fontBold}>123456</Text>
               </View>
               <View style={stylesDateToFigures.contentSpaceBetween}>
                 <Text>PHIC EE</Text>
-                <Text>123456</Text>
+                <Text style={stylesDateToFigures.fontBold}>123456</Text>
               </View>
               <View style={stylesDateToFigures.contentSpaceBetween}>
                 <Text>HDMF EE</Text>
-                <Text>123456</Text>
+                <Text style={stylesDateToFigures.fontBold}>123456</Text>
               </View>
               <View style={stylesDateToFigures.contentSpaceBetween}>
                 <Text>Net Pay</Text>
-                <Text>123456</Text>
+                <Text style={stylesDateToFigures.fontBold}>123456</Text>
               </View>
             </View>
           </View>
           <View style={styleRightContent.Wrapped}>
             <View style={styleRightContent.Header}>
-              <Text>Header</Text>
+              <View style={rightContentHeader.left}>
+                <View style={rightContentHeader.rightContentHeight}>
+                  <Text style={rightContentHeader.fontBold}>Basic Pay</Text>
+                  <Text style={rightContentHeader.fontBold}>Salary</Text>
+                </View>
+                <View style={rightContentHeader.rightContentHeight}>
+                  <Text></Text>
+                </View>
+                <View style={rightContentHeader.rightContentHeight}>
+                  <Text style={rightContentHeader.fontBold}>
+                    Taxable Allowance
+                  </Text>
+                  <Text style={rightContentHeader.fontBold}>
+                    Non-taxable Allowance
+                  </Text>
+                </View>
+                <View style={rightContentHeader.rightContentHeight}>
+                  <Text></Text>
+                </View>
+              </View>
+              <View style={rightContentHeader.middle}>
+                <View style={rightContentHeader.rightContentHeight}>
+                  <Text></Text>
+                </View>
+                <View style={rightContentHeader.rightContentHeight}>
+                  <Text style={rightContentHeader.fontBold}>
+                    Special Holiday
+                  </Text>
+                  <Text style={rightContentHeader.fontBold}>
+                    Net Night Differential
+                  </Text>
+                </View>
+                <View style={rightContentHeader.rightContentHeight}>
+                  <Text></Text>
+                </View>
+                <View style={rightContentHeader.rightContentHeight}>
+                  <Text style={rightContentHeader.fontBold}>
+                    Attendance Allowance
+                  </Text>
+                  <Text style={rightContentHeader.fontBold}>
+                    Post Allowance
+                  </Text>
+                </View>
+              </View>
+              <View style={rightContentHeader.right}>
+                <View style={rightContentHeader.rightContentHeight}>
+                  <View style={rightContentHeader.spaceBetween}>
+                    <Text style={rightContentHeader.basicPayPerMonthTitle}>
+                      16,000.00/Month
+                    </Text>
+                    <Text style={rightContentHeader.fontBold}>8,000.00</Text>
+                  </View>
+                </View>
+                <View style={rightContentHeader.rightContentHeight}>
+                  <View style={rightContentHeader.spaceBetween}>
+                    <Text style={rightContentHeader.basicPayPerMonthTitle}>
+                      2day(s)
+                    </Text>
+                    <Text style={rightContentHeader.fontBold}>394.52</Text>
+                  </View>
+                  <View style={rightContentHeader.spaceBetween}>
+                    <Text>-</Text>
+                    <Text style={rightContentHeader.fontBold}>348.49</Text>
+                  </View>
+                </View>
+                <View style={rightContentHeader.rightContentHeight}></View>
+                <View style={rightContentHeader.rightContentHeight}>
+                  <View style={rightContentHeader.spaceBetween}>
+                    <Text></Text>
+                    <Text style={rightContentHeader.fontBold}>500.00</Text>
+                  </View>
+                  <View style={rightContentHeader.spaceBetween}>
+                    <Text></Text>
+                    <Text style={rightContentHeader.fontBold}>1,000.00</Text>
+                  </View>
+                </View>
+              </View>
             </View>
             <View style={styleRightContent.Body}>
-              <Text>Body</Text>
+              <View style={rightContentMiddle.left}>
+                <Text style={rightContentMiddle.grossPayTitle}>GROSS PAY</Text>
+                <Text style={rightContentMiddle.contributionsTitle}>
+                  Contributions
+                </Text>
+              </View>
+              <View style={rightContentMiddle.right}>
+                <View style={rightContentMiddle.firstLayer}>
+                  <View style={rightContentMiddle.spaceBetween}>
+                    <Text></Text>
+                    <Text style={rightContentMiddle.grossPayAmount}>
+                      10,243.01
+                    </Text>
+                  </View>
+                </View>
+                <View style={rightContentMiddle.secondLayer}>
+                  <View style={rightContentMiddle.child}>
+                    <Text>SSS</Text>
+                    <Text style={rightContentMiddle.fontBold}>(637.50)</Text>
+                  </View>
+                  <View style={rightContentMiddle.child}>
+                    <Text>HDMF</Text>
+                    <Text style={rightContentMiddle.fontBold}>(200.00)</Text>
+                  </View>
+                  <View style={rightContentMiddle.child}>
+                    <Text>PhilHealth</Text>
+                    <Text style={rightContentMiddle.fontBold}>(400.00)</Text>
+                  </View>
+                </View>
+              </View>
             </View>
             <View style={styleRightContent.Footer}>
-              <Text>Footer</Text>
+              {/* rightContentFooter */}
+              <View style={rightContentFooter.spaceBetweenWithHighlight}>
+                <Text>TAXABLE INCOME</Text>
+                <Text>7,505.51</Text>
+              </View>
+              <View style={rightContentFooter.spaceBetween}>
+                <Text>Deductions</Text>
+                <Text></Text>
+              </View>
+              <View style={rightContentFooter.spaceBetween}>
+                <Text>Withholding Tax</Text>
+                <Text>(0.00)</Text>
+              </View>
+              <View style={rightContentFooter.spaceBetweenWithHighlight}>
+                <Text>NET PAY</Text>
+                <Text>9,005.51</Text>
+              </View>
             </View>
           </View>
         </View>
