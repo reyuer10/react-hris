@@ -1,7 +1,17 @@
-import { useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import useLoginStore, {
+  useFuncLoginActions,
+  useLoginValue,
+} from "../../context/login/loginStore";
 
 function LoginPage() {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const onChangeLogin = useLoginStore((state) => state.onChangeLogin);
+
+  const { username, password } = useLoginValue();
+  const { submitLogin } = useFuncLoginActions();
+
   return (
     <div className="h-screen w-full flex justify-center items-center p-4">
       <div className="flex flex-col w-[400px] max-md:w-full space-y-4">
@@ -13,20 +23,27 @@ function LoginPage() {
           <input
             className="max-md:text-[16px] max-md:py-4 bg-gray-100 transition-all focus-within:ring-2 ring-gray-400 outline-none border-none p-3 rounded-xl w-full"
             type="text"
+            name="username"
+            value={username}
+            onChange={onChangeLogin}
             placeholder="Username"
           />
         </div>
-        <div> 
+        <div>
           <input
             className="max-md:text-[16px] max-md:py-4 bg-gray-100 transition-all focus-within:ring-2 ring-gray-400 outline-none border-none p-3 rounded-xl w-full"
             type="text"
+            name="password"
+            value={password}
+            onChange={onChangeLogin}
             placeholder="Password"
           />
         </div>
         <div className="my-4">
           <button
-          onClick={() => navigate("dashboard")}
-          className="max-md:text-[16px] max-md:py-4 transition-all active:bg-blue-600 cursor-pointer bg-blue-500 font-medium text-white p-3 rounded-xl w-full">
+            onClick={() => submitLogin(navigate)}
+            className="max-md:text-[16px] max-md:py-4 transition-all active:bg-blue-600 cursor-pointer bg-blue-500 font-medium text-white p-3 rounded-xl w-full"
+          >
             Submit
           </button>
         </div>

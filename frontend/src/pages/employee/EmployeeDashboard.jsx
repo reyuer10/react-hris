@@ -43,7 +43,7 @@ const ViewButton = () => (
 
 function EmployeeDashboard() {
   return (
-    <div className=" h-[93vh] overflow-y-scroll w-full space-y-4 flex items-start text-[#323232]">
+    <div className=" h-[93vh] overflow-y-scroll w-full space-y-4 flex items-start text-[#323232] bg-gray-50">
       <div className="w-full p-4 space-y-4">
         <div className=" flex flex-col">
           <ViewButton />

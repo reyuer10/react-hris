@@ -1,5 +1,36 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import BundyClock from "./BundyClock";
+import { changeSchedule, clockSvg, failureToLogSvg } from "../../utils/svg";
+
+import { Calendar, momentLocalizer } from "react-big-calendar";
+import moment from "moment";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+
+// Step 1: Localizer
+const localizer = momentLocalizer(moment);
+
+// Step 2: Example events
+const initialEvents = [
+  {
+    id: 1,
+    title: "Meeting with Team",
+    start: new Date(2025, 7, 24, 10, 0), // Aug 24, 2025 at 10:00
+    end: new Date(2025, 7, 24, 11, 30), // Aug 24, 2025 at 11:30
+  },
+  {
+    id: 2,
+    title: "Lunch Break",
+    start: new Date(2025, 7, 24, 12, 0),
+    end: new Date(2025, 7, 24, 13, 0),
+  },
+  {
+    id: 3,
+    title: "Project Review",
+    start: new Date(2025, 7, 25, 9, 0),
+    end: new Date(2025, 7, 25, 10, 0),
+  },
+];
 
 export const fileOfficialTrainingSvg = (
   <svg
@@ -51,6 +82,9 @@ function Content() {
   const navigate = useNavigate();
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [events, setEvents] = useState(initialEvents);
+  const [currentDate, setCurrentDate] = useState(new Date());
+
   const receiptData = [
     {
       id: 1,
@@ -164,8 +198,23 @@ function Content() {
     },
     {
       id: 3,
-      name: "File request",
+      name: "Official Training",
       svg: fileOfficialTrainingSvg,
+    },
+    {
+      id: 4,
+      name: "Rest Day Work",
+      svg: clockSvg,
+    },
+    {
+      id: 5,
+      name: "Change Schedule",
+      svg: changeSchedule,
+    },
+    {
+      id: 6,
+      name: "Failure To Log",
+      svg: failureToLogSvg,
     },
   ];
 
@@ -176,7 +225,7 @@ function Content() {
       return navigate("employee/payslip");
     } else if (screenWidth < 640 && navName == "13 Month") {
       return navigate("employee/13month");
-    } else if (screenWidth < 640 && navName == "File Request") {
+    } else if (screenWidth < 640 && navName == "Official Training") {
       return navigate("/employee/file/official-training");
     }
 
@@ -184,37 +233,50 @@ function Content() {
       return navigate("employee/payslip/screen");
     } else if (screenWidth > 640 && navName == "13 Month") {
       return navigate("employee/13month/screen");
-    } else if (screenWidth > 640 && navName == "File Request") {
+    } else if (screenWidth > 640 && navName == "Official Training") {
       return navigate("employee/file-request/screen");
     }
   };
 
+  const handleNavigate = (newDate) => {
+    setCurrentDate(newDate);
+  };
+
   return (
-    <div className="h-[200px] border border-gray-300 p-4 rounded-2xl">
-      {/* <div>
-        <button
-          onClick={() => navigate("/employee/file/official-training")}
-          className="items-center flex flex-col cursor-pointer outline-none"
-        >
-          <span>{fileOfficialTrainingSvg}</span>
-          <div className="flex flex-col">
-            <span>File Request</span>
-          </div>
-        </button>
-      </div> */}
-      <div className="flex items-center space-x-4">
-        {receiptData.map((r) => {
-          return (
-            <button
-              key={r.id}
-              onClick={() => handleNavigateReceipt(r.name)}
-              className="flex flex-col items-center cursor-pointer"
-            >
-              <span>{r.svg}</span>
-              <p>{r.name}</p>
-            </button>
-          );
-        })}
+    <div className="flex items-start gap-4">
+      <div className=" flex flex-col items-start space-y-4 w-[50%]">
+        <BundyClock />
+        <div className="flex items-center flex-wrap justify-center gap-3 border p-4 rounded-xl border-gray-300 bg-white">
+          {receiptData.map((r) => {
+            return (
+              <button
+                key={r.id}
+                onClick={() => handleNavigateReceipt(r.name)}
+                className="flex flex-col items-center cursor-pointer w-[30%] py-1 border rounded-lg border-gray-300"
+              >
+                <span>{r.svg}</span>
+                <p>{r.name}</p>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+      <div className=" w-[50%] h-[600px]">
+        <Calendar
+          localizer={localizer}
+          events={events}
+          startAccessor="start"
+          endAccessor="end"
+          date={currentDate}
+          onNavigate={handleNavigate}
+          defaultDate={currentDate}
+          style={{ height: "100%" }}
+          popup
+          showMultiDayTimes
+          step={60}
+          timeslots={2}
+          views={["month", "day"]}
+        />
       </div>
     </div>
   );

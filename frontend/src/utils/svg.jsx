@@ -260,3 +260,148 @@ export const logoutSvg = (
     </g>
   </svg>
 );
+
+export const clockSvg = (
+  <svg
+    height={24}
+    width={24}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g
+      id="SVGRepo_tracerCarrier"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      {" "}
+      <path
+        opacity="0.1"
+        d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+        fill="#323232"
+      ></path>{" "}
+      <path
+        d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+        stroke="#323232"
+        stroke-width="2"
+      ></path>{" "}
+      <path
+        d="M12 7L12 11.5L12 11.5196C12 11.8197 12.15 12.1 12.3998 12.2665V12.2665L15 14"
+        stroke="#323232"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>{" "}
+      <path
+        d="M3 4L4 3"
+        stroke="#323232"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>{" "}
+      <path
+        d="M21 4L20 3"
+        stroke="#323232"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>{" "}
+    </g>
+  </svg>
+);
+
+export const changeSchedule = (
+  <svg
+    height={24}
+    width={24}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g
+      id="SVGRepo_tracerCarrier"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      {" "}
+      <path
+        opacity="0.1"
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12Z"
+        fill="#323232"
+      ></path>{" "}
+      <path
+        d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+        stroke="#323232"
+        stroke-width="2"
+      ></path>{" "}
+      <path
+        d="M7 12C7 9.23858 9.23858 7 12 7"
+        stroke="#323232"
+        stroke-width="2"
+        stroke-linecap="round"
+      ></path>{" "}
+      <path
+        d="M13 12C13 12.5523 12.5523 13 12 13C11.4477 13 11 12.5523 11 12C11 11.4477 11.4477 11 12 11C12.5523 11 13 11.4477 13 12Z"
+        stroke="#323232"
+        stroke-width="2"
+      ></path>{" "}
+      <path
+        d="M12 12L16 8"
+        stroke="#323232"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>{" "}
+    </g>
+  </svg>
+);
+
+export const failureToLogSvg = (
+  <svg
+    height={24}
+    width={24}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g
+      id="SVGRepo_tracerCarrier"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      {" "}
+      <path
+        opacity="0.1"
+        d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+        fill="#323232"
+      ></path>{" "}
+      <path
+        d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+        stroke="#323232"
+        stroke-width="2"
+      ></path>{" "}
+      <path
+        d="M9 9L15 15"
+        stroke="#323232"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>{" "}
+      <path
+        d="M15 9L9 15"
+        stroke="#323232"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>{" "}
+    </g>
+  </svg>
+);

@@ -184,7 +184,7 @@ function AttendanceCalendar() {
   ];
 
   return (
-    <div className=" border border-gray-300 p-4 rounded-2xl">
+    <div className=" border border-gray-300 p-4 rounded-2xl bg-white">
       <div className="space-x-4 flex flex-col">
         <div className="flex max-sm:flex-col items-center max-sm:items-start max-sm:space-y-2 justify-between">
           <div>

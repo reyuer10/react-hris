@@ -16,7 +16,7 @@ function Header() {
     },
   ];
   return (
-    <div className="h-[15%] border border-gray-300 p-4 rounded-2xl bg-gray-50">
+    <div className="h-[15%] border border-gray-300 p-4 rounded-2xl bg-white">
       {headerData.map((h, index) => {
         return (
           <div className="flex max-sm:flex-col sm:w-full space-y-4" key={h.id}>

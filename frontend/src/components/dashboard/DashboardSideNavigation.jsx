@@ -36,7 +36,7 @@ function DashboardSideNavigation() {
     {
       id: 4,
       name: "Logout",
-      path: "employee/13month/screen",
+      path: "/",
       svg: logoutSvg,
     },
   ];

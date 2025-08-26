@@ -12,6 +12,7 @@ import AdminDashboardLayout from "./layout/AdminDashboardLayout";
 import LoginPage from "./pages/login-user/LoginPage";
 import UserTable from "./pages/admin/UserTable";
 import RegisterEmployee from "./pages/admin/RegisterEmployee";
+import CreatePayslip from "./pages/admin/CreatePayslip";
 
 function App() {
   return (
@@ -20,10 +21,8 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="admin/dashboard" element={<AdminDashboardLayout />}>
           <Route index element={<UserTable />} />
-          <Route
-            path="register/employee"
-            element={<RegisterEmployee />}
-          />
+          <Route path="create/payslip" element={<CreatePayslip />} />
+          <Route path="register/employee" element={<RegisterEmployee />} />
         </Route>
         <Route path="dashboard" element={<DashboardLayout />}>
           <Route index element={<EmployeeDashboard />} />

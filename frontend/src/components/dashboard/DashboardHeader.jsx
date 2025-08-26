@@ -53,7 +53,7 @@ function DashboardHeader() {
         <div>
           {headerData.map((data) => {
             return (
-              <div className="flex flex-col">
+              <div key={data.id} className="flex flex-col">
                 <span className="text-[16px] font-bold">{data.name}</span>
               </div>
             );
