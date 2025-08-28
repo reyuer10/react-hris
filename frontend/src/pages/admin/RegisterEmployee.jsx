@@ -21,13 +21,13 @@ function RegisterEmployee() {
   // const registerValue = useRegisterStore((state) => state.registerValue);
   // const employeeInfo = useRegisterStore((state) => state.employeeInfo);
   const onChangeRegister = useRegisterStore((state) => state.onChangeRegister);
-
+  const registerEmployee = useRegisterStore((state) => state.registerEmployee);
   const [dateHiredVal, setDateHiredVal] = useState(null);
 
   const employeeData = useEmployeeData();
   const loginData = useLoginData();
   const governmentData = useGovernmentData();
-  console.log(employeeData);
+  // console.log(employeeData);
 
   const { userName, passWord } = loginData;
 
@@ -43,7 +43,26 @@ function RegisterEmployee() {
 
   const { empSSS, empPhilhealth, empTin, empPagibig } = governmentData;
 
-  console.log(dateHiredVal);
+  const handleConvertDate = (date) => {
+    if (date) {
+      let year = date.year;
+      let month = date.month;
+      let day = date.day;
+
+      return `${year}-${month}-${day}`;
+    }
+
+    return null;
+  };
+
+  const handleConvertFullname = (fName, lName, mName) => {
+    if (fName && lName && mName) {
+      return `${fName} ${mName} ${lName}`;
+    }
+
+    return null;
+  };
+
   return (
     <div className="space-y-8">
       <div className="space-y-4 pb-4 border-b-[0.5px] border-b-gray-400">
@@ -152,7 +171,8 @@ function RegisterEmployee() {
                 Daily Rate
               </label>
               <input
-                type="text"
+                type="number"
+                placeholder="0"
                 className="w-[250px] p-2 rounded-lg bg-gray-100 outline-none"
                 name="dailyRate"
                 value={dailyRate}
@@ -254,7 +274,7 @@ function RegisterEmployee() {
       <div>
         <button
           onClick={onOpen}
-          className="px-4 py-2 rounded-lg font-medium bg-[#323232] text-white"
+          className="px-4 py-2 rounded-lg font-medium bg-[#323232] text-white cursor-pointer"
         >
           Register
         </button>
@@ -277,7 +297,9 @@ function RegisterEmployee() {
         footerSubmitTite="Yes"
         classNameOnclose="bg-gray-100 py-2 rounded-lg w-[80px] cursor-pointer"
         classNameSubmit="bg-[#323232] text-white px-4 py-2 rounded-lg w-[80px] cursor-pointer"
-        onclickSubmit={onClose}
+        onclickSubmit={() =>
+          registerEmployee(handleConvertDate(dateHiredVal), onClose)
+        }
       />
     </div>
   );

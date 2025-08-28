@@ -1,4 +1,23 @@
 import { create } from "zustand";
+import axios from "axios";
+
+const env = import.meta.env;
+
+const API_ENDPOINTS = {
+  baseURL: env.VITE_BASE_URL,
+  registerEmployee: env.VITE_REGISTER_EMPLOYEE,
+};
+
+const apiServices = {
+  apiRegisterEmployee: async (payload) => {
+    const response = await axios.post(
+      `${API_ENDPOINTS.baseURL}/${API_ENDPOINTS.registerEmployee}`,
+      payload
+    );
+
+    return response;
+  },
+};
 
 const loginInfo = {
   userName: "",
@@ -18,7 +37,6 @@ const initialEmployeeInfoValue = {
   firstName: "",
   middleInitial: "",
   dailyRate: 0,
-  dateHired: null,
   position: "",
 };
 
@@ -49,6 +67,66 @@ const registerStore = (set, get) => ({
         [name]: value,
       },
     }));
+  },
+
+  resetToDefault: () =>
+    set(() => ({
+      loginData: { ...loginInfo },
+      governmentData: { ...initialRegisterValue },
+      employeeData: { ...initialEmployeeInfoValue },
+      // YearToDateFiguresValueData: { ...initialYearToDateFiguresValueData }, // if applicable
+    })),
+
+  registerEmployee: async (dateHired, onSuccess) => {
+    const { userName, passWord } = get().loginData;
+
+    const { empSSS, empPhilhealth, empTin, empPagibig } = get().governmentData;
+
+    const { empId, surName, firstName, middleInitial, dailyRate, position } =
+      get().employeeData;
+
+    const fullName = `${String(firstName).trim()} ${String(
+      middleInitial
+    ).trim()} ${String(surName).trim()}`;
+
+    try {
+      console.log({
+        userName,
+        passWord,
+        empSSS,
+        empPhilhealth,
+        empTin,
+        empPagibig,
+        empId,
+        fullName,
+        dailyRate,
+        dateHired,
+        position,
+      });
+
+      const payload = {
+        emp_name: fullName,
+        emp_username: userName,
+        emp_password: passWord,
+        emp_position: position,
+        emp_sss: empSSS,
+        emp_pagibig: empPagibig,
+        emp_philHealth: empPhilhealth,
+        emp_tin: empTin,
+        emp_dateHired: dateHired,
+        emp_dailyRate: dailyRate,
+      };
+
+      const response = await apiServices.apiRegisterEmployee(payload);
+
+      if (response.status == 200) {
+        get().resetToDefault();
+        return onSuccess();
+      }
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
   },
 });
 
